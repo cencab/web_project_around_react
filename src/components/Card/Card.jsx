@@ -1,12 +1,11 @@
-import React from "react";
 import ImagePopup from "../ImagePopup/ImagePopup";
 
 export default function Card(props) {
-  const { card, onCardClick } = props;
+  const { card, onCardClick, onCardDelete } = props;
   const { name, link, isLiked } = card;
 
   const cardLikeButtonClassName = `card__like-button ${
-    isLiked ? "card__like-button_active" : ""
+    isLiked ? "card__like-button_is-active" : ""
   }`;
 
   const imagePopup = {
@@ -26,6 +25,7 @@ export default function Card(props) {
         aria-label="Eliminar tarjeta"
         className="card__delete-button"
         type="button"
+        onClick={onCardDelete}
       />
       <div className="card__description">
         <h2 className="card__title">{name}</h2>

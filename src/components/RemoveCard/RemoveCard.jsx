@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function RemoveCard() {
   return (
     <form className="popup__form" id="remove-card-form" noValidate>

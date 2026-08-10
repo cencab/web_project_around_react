@@ -80,7 +80,12 @@ export default function Main() {
       <section className="cards page__section">
         <ul className="cards__list">
           {cards.map((card) => (
-            <Card key={card._id} card={card} onCardClick={handleOpenPopup} />
+            <Card
+              key={card._id}
+              card={card}
+              onCardClick={handleOpenPopup}
+              onCardDelete={() => handleOpenPopup(removeCardPopup)}
+            />
           ))}
         </ul>
       </section>

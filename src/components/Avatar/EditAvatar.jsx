@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function EditAvatar() {
   return (
     <form className="popup__form" name="avatar-form" noValidate>
